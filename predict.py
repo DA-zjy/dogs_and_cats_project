@@ -24,7 +24,7 @@ def predict_from_scratch():
     model = ResNet34(num_classes=2).to(config.DEVICE) # 确保类别数为2
     
     # 4. 加载你训练好的最佳模型权重
-    print(f"正在加载模型: {config.CHECKPOINT_PATH}/dogs_and_cats_epoch_28.pth")
+    print(f"正在加载模型: {config.CHECKPOINT_PATH}/dogs_and_cats_epoch_50.pth")
     model.load_state_dict(torch.load(MODEL_PATH))
     
     # 5. 切换到评估模式
