@@ -2,7 +2,7 @@
 
 ## 1. 项目概述
 
-Kaggle的"Dogs vs. Cats"竞赛项目，目标是使用深度学习模型（ResNet34）对猫和狗进行分类，读入任意的.jpg图片并输出submission.csv，预测为狗的概率。
+Kaggle的"Dogs vs. Cats"竞赛项目，目标是使用深度学习模型（ResNet34）对猫和狗进行分类，读入任意的.jpg图片并输出submission.csv，预测为狗的概率。项目提供了两种训练方法，从零训练一个ResNet34和导入在ImageNet上训练好的ResNet34及其权重，分别在验证集上取得了95.56%和98.44%的正确率，并在kaggle上取得了
 
 ## 2. 项目结构
 
@@ -14,6 +14,7 @@ Kaggle的"Dogs vs. Cats"竞赛项目，目标是使用深度学习模型（ResNe
 ├── dataset.py    # 定义数据加载和预处理的Dataset类
 ├── model.py      # 定义CNN模型架构 (ResNet34)
 ├── train.py      # 主训练脚本
+├── train_transfer.py #迁移训练脚本
 ├── predict.py    # 生成提交文件的脚本
 ├── submission.csv # 生成的提交文件示例 
 └── README.md     # 项目说明文件
@@ -72,6 +73,12 @@ python train.py
 ```
 * 所有超参数（如 Epochs, Batch Size, Learning Rate）都可以在 `config.py` 文件中进行修改。
 * 训练过程中，模型权重将被自动保存到 `checkpoints/` 目录下。
+
+### 迁移训练
+从命令行运行 `train_transfer.py` 脚本即可开始训练。
+```bash
+python train_transfer.py
+```
 
 ### 进行预测
 (如果已创建 `predict.py`)
