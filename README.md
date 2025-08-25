@@ -2,7 +2,7 @@
 
 ## 1. 项目概述
 
-Kaggle的"Dogs vs. Cats"竞赛项目，目标是使用深度学习模型（ResNet34）对猫和狗进行分类，读入任意的.jpg图片并输出submission.csv，预测为狗的概率。项目提供了两种训练方法，从零训练一个ResNet34和导入在ImageNet上训练好的ResNet34及其权重，分别在验证集上取得了95.56%和98.44%的正确率，并在kaggle上取得了
+Kaggle的"Dogs vs. Cats"竞赛项目，目标是使用深度学习模型（ResNet34）对猫和狗进行分类，读入任意的.jpg图片并输出submission.csv，预测为狗的概率。项目提供了两种训练方法，从零训练一个ResNet34和导入在ImageNet上训练好的ResNet34及其权重，分别在验证集上取得了95.56%和98.44%的正确率，并在kaggle上取得了459名。
 
 ## 2. 项目结构
 
